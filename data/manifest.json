@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-10-26",
+  "sample_id": "B",
+  "role_in_this_experiment": "development",
+  "contents": "One complete OC document and its paired native CLI reference",
+  "input_format": "Single-line JSON with supplier export conventions; formal schema not confirmed",
+  "reference_format": "Native H3C CLI; vendor confirmed by the user on 2026-10-27. Exact device model/NOS/version not confirmed.",
+  "primary_command_reference": {
+    "directory": "references/h3c-s9827-s9857-r932x-6w101",
+    "product_family": "H3C S9827 & S9857",
+    "manual_release_family": "R932x",
+    "software_release_described_by_guide": "Release 9323",
+    "document_revision": "6W101",
+    "status": "Selected development reference based on sample B CLI; not confirmation of the source platform or software release"
+  },
+  "pair_status": "Provided as corresponding files; same-snapshot and lossless-export relationship not independently confirmed",
+  "files": [
+    {
+      "side": "oc",
+      "path": "data/raw/CQ-JLDC-2201-A03-H9867-GPULA-024.txt",
+      "original_filename": "CQ-JLDC-2201-A03-H9867-GPULA-024.txt",
+      "bytes": 931414,
+      "sha256": "b60b07a2af299ad1e06a94791813df6cc66d63d0d12e4eb0b1eeb841bbd1f430",
+      "byte_identity_verified": true
+    },
+    {
+      "side": "cli",
+      "path": "data/raw/配置文本_CQ-JLDC-2201-A03-H9867-GPULA-024.txt",
+      "original_filename": "配置文本_CQ-JLDC-2201-A03-H9867-GPULA-024.txt",
+      "bytes": 445120,
+      "sha256": "53abe73328a17346f79a7ed4c225011c215c99d2efa3ac74fda68b5618974215",
+      "byte_identity_verified": true
+    }
+  ]
+}

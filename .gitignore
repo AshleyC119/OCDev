@@ -1,0 +1,12 @@
+outputs/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+tmp/
+*.log
+references/**/*.pdf
+references/**/manual.txt
+references/**/*.html

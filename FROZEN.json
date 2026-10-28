@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "implementation": {
+    "name": "oc2h3c",
+    "version": "1.0.0"
+  },
+  "frozen_on": "2026-10-27",
+  "frozen_time_zone": "Asia/Shanghai",
+  "usage": "python -m oc2h3c <oc.json> -o <out.cli> --report <report.json> --report-text <report.txt>",
+  "input_materials": [
+    {
+      "side": "oc",
+      "path": "data/raw/CQ-JLDC-2201-A03-H9867-GPULA-024.txt",
+      "sha256": "b60b07a2af299ad1e06a94791813df6cc66d63d0d12e4eb0b1eeb841bbd1f430",
+      "bytes": 931414
+    },
+    {
+      "side": "cli",
+      "path": "data/raw/配置文本_CQ-JLDC-2201-A03-H9867-GPULA-024.txt",
+      "sha256": "53abe73328a17346f79a7ed4c225011c215c99d2efa3ac74fda68b5618974215",
+      "bytes": 445120
+    }
+  ],
+  "reference_command_manual": {
+    "directory": "references/h3c-s9827-s9857-r932x-6w101",
+    "product_family": "H3C S9827 & S9857",
+    "manual_release_family": "R932x",
+    "software_release_described_by_guide": "Release 9323",
+    "document_revision": "6W101",
+    "status": "Selected development reference based on sample B CLI; not confirmation of the source platform or software release"
+  },
+  "development_validation": {
+    "input_sha256": "b60b07a2af299ad1e06a94791813df6cc66d63d0d12e4eb0b1eeb841bbd1f430",
+    "input_bytes": 931414,
+    "output_cli_lines": 15517,
+    "output_cli_sha256": "ff9752bc13b4f202774e0fcad28b4ab1d7f9da513fa2ddbc28de1c11e60e75cf",
+    "reference_cli_lines": 15521,
+    "segments": 1183,
+    "segments_byte_identical": 1182,
+    "known_difference": "segment 10: reference emits fixed qos map-table dot1p-lp default entries with no OC source; deliberately not reproduced",
+    "coverage": {
+      "data_leaves": 26341,
+      "mapped_leaves": 16562,
+      "redundant_metadata_leaves": 7012,
+      "unmapped_content_leaves": 2767
+    },
+    "diagnostics": {
+      "unmapped": 2767,
+      "unsupported": 1366,
+      "ambiguous": 460,
+      "ignored": 1112,
+      "errors": 0
+    },
+    "runtime": {
+      "python": "Python 3.13.6",
+      "third_party_dependencies": [],
+      "offline": true,
+      "deterministic": true,
+      "reads_reference_cli_at_runtime": false
+    }
+  },
+  "files": {
+    "AGENTS.md": {
+      "sha256": "528bcda329ebb755e5c5f8cbb2633932501f9f79c7293b2a94b7ed3de0d87789",
+      "bytes": 1409
+    },
+    "PROMPT.md": {
+      "sha256": "12ad306a893711167d7d066575fe59ab8140cbf3ee7fe0701bc0903f694b19f8",
+      "bytes": 1121
+    },
+    "README.md": {
+      "sha256": "d8eadfe328ac77a0f625ca4e20753227d5d3e1964c2f20961f506c96807e2296",
+      "bytes": 1987
+    },
+    "docs/DEV_NOTES.md": {
+      "sha256": "a89d605ab7780946dd9f0d68deb5ffa4569450d266a81b3bb34bdb023e9ed117",
+      "bytes": 5499
+    },
+    "docs/LIMITATIONS.md": {
+      "sha256": "8c983996066081903b5f4080806f651540bb752b4db970788caf58e30c3906f1",
+      "bytes": 6838
+    },
+    "docs/SUPPORT.md": {
+      "sha256": "acc76ba602b189fc975cfbd9d87fe9e8be32a5f8cf66bec603c5b6445193ab6e",
+      "bytes": 6948
+    },
+    "docs/USAGE.md": {
+      "sha256": "0d87b31152c093eb3fe26619486dda09a6c8344507962eda90d5ccb3bcdd424b",
+      "bytes": 2570
+    },
+    "oc2h3c/__init__.py": {
+      "sha256": "2940aba262f2960378a7867cfa268efb7bd55b5d941bfb5325551b1d1cca2f7f",
+      "bytes": 96
+    },
+    "oc2h3c/__main__.py": {
+      "sha256": "eb5a255d9521d1254432251b642bbf51ccb20b70af8c5b9ceb769df5370fec01",
+      "bytes": 2694
+    },
+    "oc2h3c/context.py": {
+      "sha256": "6385fd390c7e827db25c9b00f49990bbce3e622a24b1716f67960911fc3c8f62",
+      "bytes": 7204
+    },
+    "oc2h3c/emitter.py": {
+      "sha256": "8ab3f7cc1e1a3222ae7424f41325ce94dd8fe2f12dbe73af7d42ec35b48703cc",
+      "bytes": 523
+    },
+    "oc2h3c/errors.py": {
+      "sha256": "5352f388925fb092a4e65d0b59d73e7e1c864b86fdbfcd5f40bd45e7146c2cfc",
+      "bytes": 250
+    },
+    "oc2h3c/loader.py": {
+      "sha256": "f8dc16e6b59fa25c70f7445e85737429a2e6a88df940d5085e9240516d74946f",
+      "bytes": 1124
+    },
+    "oc2h3c/pipeline.py": {
+      "sha256": "e5eb4c328b70c783d803f307e0e6c0b67ccde7a44b467ff34423afefc8611eef",
+      "bytes": 677
+    },
+    "oc2h3c/report.py": {
+      "sha256": "fa8c87cd91629474849f42e4c279366440f5381471d0c02b20f2ac532ec69d46",
+      "bytes": 8260
+    },
+    "oc2h3c/sections/__init__.py": {
+      "sha256": "ec0217dcfdf9061a7cb255eaea92ccdb813260d6e24babfa0d0e7f8487c2bd8f",
+      "bytes": 2589
+    },
+    "oc2h3c/sections/aaa.py": {
+      "sha256": "e118b18b6814d9fadd4ea5dd789e3df2291211cadaf3b101d3cf73cc55288574",
+      "bytes": 17601
+    },
+    "oc2h3c/sections/acl.py": {
+      "sha256": "7d2707e2e79dc145ff9a83306548ae717aa688d7ed560cd0b9bc5df2fb7ae330",
+      "bytes": 5021
+    },
+    "oc2h3c/sections/bfd_routing.py": {
+      "sha256": "da758626f129914606acfdf11dc5efa321d01e23c97adfceb2be5d645e8351d1",
+      "bytes": 13682
+    },
+    "oc2h3c/sections/bgp.py": {
+      "sha256": "c99c70e605e277da310d3bcf017f750fa3d99caef137454085c810da2cf70e08",
+      "bytes": 20189
+    },
+    "oc2h3c/sections/buffer.py": {
+      "sha256": "eaff848f18fc9d2ec016fa2ba5c256ab7d712ea26cd6b6e75d46cdeffeec70c6",
+      "bytes": 4737
+    },
+    "oc2h3c/sections/common.py": {
+      "sha256": "d163c7d44dbb10be95a9b85b8ec7b11a51c6c48ac5b16c22a1036deca64df5c4",
+      "bytes": 2957
+    },
+    "oc2h3c/sections/int_ifa.py": {
+      "sha256": "105dfd47c15c77d6f8e1bf99f5b73237af79962e182299e70fb20cad289142e3",
+      "bytes": 2591
+    },
+    "oc2h3c/sections/interfaces.py": {
+      "sha256": "1acd92749a47348313f96b6792aa11cf5228e409474ad825f3c5aed7350f06c7",
+      "bytes": 11690
+    },
+    "oc2h3c/sections/lacp.py": {
+      "sha256": "9b3a4661c3a4eb1a6a57c60385700f7ee5ad3437c0f165d7195e0150b1263ea3",
+      "bytes": 3425
+    },
+    "oc2h3c/sections/lines.py": {
+      "sha256": "716e2eafe2ca43b801ff52c4c6914ad890009cc1fb7b1b9dc904093491ab0e8e",
+      "bytes": 1808
+    },
+    "oc2h3c/sections/lldp.py": {
+      "sha256": "53251d1a627958b496be99ee789a5daedcb77572b23c06667f1bcc07a0e33f83",
+      "bytes": 3216
+    },
+    "oc2h3c/sections/monitor.py": {
+      "sha256": "8fad4dc743bd6cb9f972e8f287e9a4431802cea19b9f747b63acb3c555aa7409",
+      "bytes": 3306
+    },
+    "oc2h3c/sections/qos.py": {
+      "sha256": "f8990c0ee98bed9908de3857dd324893cc2074b9be8158d60c87bbe8203767aa",
+      "bytes": 13315
+    },
+    "oc2h3c/sections/relay.py": {
+      "sha256": "547eb9e8982a741fb91fd2041570777d6058c575b0190d33817788b41a4d74d5",
+      "bytes": 2118
+    },
+    "oc2h3c/sections/sflow.py": {
+      "sha256": "b1d1aafdbafe5a0169cf1f0949188def87e6508ec63e9d11ffe4cd23b0e6b242",
+      "bytes": 8751
+    },
+    "oc2h3c/sections/system.py": {
+      "sha256": "c15350fb12601a1729b31a8c1289b89d400ddac57a1e7db5467b9b2bd62b229a",
+      "bytes": 15364
+    },
+    "oc2h3c/sections/telemetry.py": {
+      "sha256": "5e716682bdaf8f0cde306c2833d133080608e282ba0b70f4010f3f09469fb19c",
+      "bytes": 7873
+    },
+    "oc2h3c/sections/telemetry_mod.py": {
+      "sha256": "01f41eb666a31853a4208f5b1de15f9b2699803ac5faf602ec712aa794fafd74",
+      "bytes": 3514
+    },
+    "oc2h3c/sections/vlan.py": {
+      "sha256": "6ec7c9000eae8f35c40cce337faf10935a41d5f73d8b27df9fdaa96204762017",
+      "bytes": 839
+    },
+    "oc2h3c/sections/vpn_static.py": {
+      "sha256": "1129dce3fa33b050d0b17551cf6d8fadd5d2553f4deb9ae3c8d54a2626d79055",
+      "bytes": 4133
+    },
+    "tests/test_translator.py": {
+      "sha256": "21961267de7be0e6d1e9977374b70d29ae1ea4d91b302bd197e045dd7ceaadb2",
+      "bytes": 8189
+    },
+    "tools/compare.py": {
+      "sha256": "f47e2018e21aaeca1fa068246b419ef2dfd607b84c935c1fc1d670161bd8d9de",
+      "bytes": 3416
+    },
+    "tools/compare_segments.py": {
+      "sha256": "a2e3efca01702b3179e44e0dfb1455fcbf9f5f6589c57b904824cb912c20cd1a",
+      "bytes": 3195
+    },
+    "tools/freeze.py": {
+      "sha256": "8fbb648dce4a39398a5f6462bdea36953959dfab61851c7c240b5f81afcaf527",
+      "bytes": 4906
+    }
+  },
+  "notes": [
+    "FROZEN.json itself is not hashed.",
+    "Any change under oc2h3c/, tests/, tools/, docs/ or the listed top-level documents invalidates this identity; bump the version and re-freeze.",
+    "The paired native CLI reference and the command manual are development materials; the translator never reads them at runtime."
+  ]
+}
